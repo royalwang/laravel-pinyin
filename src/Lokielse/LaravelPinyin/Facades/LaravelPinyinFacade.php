@@ -1,4 +1,5 @@
-<?php namespace Jeepmac\Pinyinslug\Facades;
+<?php
+namespace Lokielse\LaravelPinyin\Facades;
 
 use Illuminate\Support\Facades\Facade;
 
