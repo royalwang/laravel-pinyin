@@ -66,11 +66,11 @@ Pinyin::convert('喛喞喟喠喡喢喣', Pinyin::POLICY_HYPHEN);
 # he-ji-huai-chong-wei-che-xu
 
 # first pinyin
-Pinyin::first('今天天气不错'); 
-# J
+Pinyin::first('上海市');
+# S
 
-Pinyin::first('APPLE');
-# A
+Pinyin::first('China');
+# C
 
 
 //default
