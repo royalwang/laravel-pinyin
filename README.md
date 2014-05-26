@@ -8,7 +8,7 @@ The Pinyin service provider can be installed via [composer](http://getcomposer.o
 ```json
 {
     "require": {
-        "lokielse/pinyin": "dev-master"
+        "lokielse/laravel-pinyin": "dev-master"
     }
 }
 ```
@@ -18,7 +18,7 @@ Next, add the service provider to `app/config/app.php`.
 ```php
 'providers' => [
     //..
-    'Lokielse\Pinyin\PinyinServiceProvider',
+    'Lokielse\LaravelPinyin\LaravelPinyinServiceProvider',
 ]
 ```
 
@@ -26,7 +26,7 @@ Then, add alias
 ```php
 'aliases' => [
     //..
-    'Pinyin'=>'Lokielse\Pinyin\Facades\PinyinFacade',
+    'Pinyin'=>'Lokielse\LaravelPinyin\Facades\LaravelPinyinFacade',
 ]
 
 ```

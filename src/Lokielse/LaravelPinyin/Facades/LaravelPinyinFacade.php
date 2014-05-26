@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Facade;
 
-class PinyinFacade extends Facade
+class LaravelPinyinFacade extends Facade
 {
 
     /**
@@ -12,6 +12,6 @@ class PinyinFacade extends Facade
      */
     protected static function getFacadeAccessor()
     {
-        return 'pinyin';
+        return 'laravel-pinyin';
     }
 }

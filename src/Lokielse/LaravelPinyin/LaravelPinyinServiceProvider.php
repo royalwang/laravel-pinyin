@@ -3,7 +3,7 @@
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Foundation\AliasLoader;
 
-class PinyinslugServiceProvider extends ServiceProvider
+class LaravelPinyinServiceProvider extends ServiceProvider
 {
 
     /**
@@ -20,7 +20,7 @@ class PinyinslugServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        $this->package('lokielse/pinyin');
+        $this->package('lokielse/laravel-pinyin');
     }
 
     /**
@@ -30,9 +30,9 @@ class PinyinslugServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->app['pinyinslug'] = $this->app->share(
+        $this->app['laravel-pinyin'] = $this->app->share(
             function ($app) {
-                return new Pinyinslug;
+                return new LaravelPinyin;
             }
         );
     }

@@ -1,7 +1,7 @@
 {
-	"name": "lokielse/pinyin",
-	"description": "Get Pinyin from Chinese",
-	"keywords": ["Chinese", "Pinyin", "Slug", "Tag"],
+	"name": "lokielse/laravel-pinyin",
+	"description": "Chinese Pinyin Bundle For Laravel",
+	"keywords": ["chinese", "pinyin", "laravel"],
 	"license": "MIT",
 	"authors": [
 		{
@@ -15,7 +15,7 @@
 	},
 	"autoload": {
 		"psr-0": {
-			"Lokielse\\Pinyin": "src/"
+			"Lokielse\\LaravelPinyin": "src/"
 		}
 	},
 	"minimum-stability": "stable"

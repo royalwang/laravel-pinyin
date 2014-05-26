@@ -3,7 +3,7 @@ namespace Lokielse\Pinyin;
 
 use Lokielse\Pinyin\Lib\Pinyin as PinyinLib;
 
-class Pinyin
+class LaravelPinyin
 {
 
     const POLICY_CAMEL = 1;
