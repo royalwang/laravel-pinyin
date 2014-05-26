@@ -3,7 +3,7 @@ Laravel-Pinyin
 
 ## Installation
 
-The Pinyin service provider can be installed via [composer](http://getcomposer.org) by requiring the `lokielse/pinyin` package in your project's `composer.json`.
+The Pinyin service provider can be installed via [composer](http://getcomposer.org) by requiring the `lokielse/laravel-pinyin` package in your project's `composer.json`.
 
 ```json
 {

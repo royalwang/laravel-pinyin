@@ -116,22 +116,19 @@ class Pinyin
                 $components[] = $han;
                 $han          = '';
                 $i++;
-            } else {
-                if ($i < (strlen($s) - 1)) {
-                    if (ord($s[$i]) == 95) {
-                        //go
-                        $components[] = $han;
-                        $han          = '';
-                    } elseif (ord($s[$i + 1]) <= 128) {
-                        $han .= $s[$i];
-                    } else {
-                        $han .= $s[$i];
-                        $components[] = $han;
-                        $han          = '';
-                    }
+            } elseif ($i < (strlen($s) - 1)) {
+                if (ord($s[$i]) == 95) {
+                    $components[] = $han;
+                    $han          = '';
+                } elseif (ord($s[$i + 1]) <= 128) {
+                    $han .= $s[$i];
                 } else {
                     $han .= $s[$i];
+                    $components[] = $han;
+                    $han          = '';
                 }
+            } else {
+                $han .= $s[$i];
             }
         }
         $components[] = $han;
