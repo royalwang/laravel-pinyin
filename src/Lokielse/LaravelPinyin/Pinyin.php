@@ -39,7 +39,7 @@ class Pinyin
      */
     protected static function getGBKString($s)
     {
-        $s = \mb_convert_encoding($s, 'GBK', mb_detect_encoding($s));
+        $s = mb_convert_encoding($s, 'GBK', mb_detect_encoding($s));
         return $s;
     }
 
@@ -103,11 +103,12 @@ class Pinyin
 
     private static function getPinyinComponents($s)
     {
-        $pinyinObj = new PinyinLib();
-        $s         = trim($s);
-        $s         = preg_replace('/\s/is', '_', $s);
-        $s   = self::getGBKString($s);
-        $han = '';
+        $pinyinObj  = new PinyinLib();
+        $s          = trim($s);
+        $s          = preg_replace('/\s/is', '_', $s);
+        $s          = self::getGBKString($s);
+        $han        = '';
+        $components = array();
         for ($i = 0; $i < strlen($s); $i++) {
             if (ord($s[$i]) > 128) {
                 $char = $pinyinObj->asc2ToPinyin(ord($s[$i]) + ord($s[$i + 1]) * 256);
