@@ -30,4 +30,11 @@ class PinyinTest extends \PHPUnit_Framework_TestCase
         Pinyin::setDefaultUpperCase(false);
         $this->assertEquals('jin_tian_tian_qi_bu_cuo', $pinyin->convert('今天天气不错'));
     }
+
+    public function testFirst()
+    {
+        $pinyin = new Pinyin();
+        $this->assertEquals('J', $pinyin->first('今天天气不错'));
+        $this->assertEquals('A', $pinyin->first('a'));
+    }
 }

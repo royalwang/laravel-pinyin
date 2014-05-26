@@ -32,6 +32,15 @@ class Pinyin
         self::$defaultUppercase = $upper;
     }
 
+    /**
+     * Convert String To PinYin
+     *
+     * @param      $string
+     * @param null $policy
+     * @param null $uppercase
+     *
+     * @return string
+     */
     public function convert($string, $policy = null, $uppercase = null)
     {
         if (is_null($policy)) {
@@ -44,6 +53,27 @@ class Pinyin
         $py = $this->applyPolicy($py, $policy);
         $uppercase && $py = strtoupper($py);
         return $py;
+    }
+
+    /**
+     * Get First Pinyin Letter
+     *
+     * @param      $string
+     * @param bool $uppercase
+     *
+     * @return string
+     */
+    public function first($string, $uppercase = true)
+    {
+        $firstChar = mb_substr($string, 0, 1, 'UTF-8');
+        $py        = $this->convert($firstChar);
+        $firstPy   = substr($py, 0, 1);
+        if ($uppercase) {
+            $firstPy = strtoupper($firstPy);
+        } else {
+            $firstPy = strtolower($firstPy);
+        }
+        return $firstPy;
     }
 
     private static function stringToPinyin($s)
