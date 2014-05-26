@@ -1,6 +1,6 @@
 <?php
-namespace Jeepmac\Pinyinslug\Lib;
-use Log;
+namespace Lokielse\Pinyin\Lib;
+
 /**
  * Pinyin 汉字转换拼音类
  */
@@ -519,7 +519,7 @@ class Pinyin {
         "Zuo"=>array(61932,53739,33225,18050,25788,31432,63191,35536,63959,63703,27065,38882,39606,32182,62167,62423,62679,62860,59610,63447,38591,63116)
         );
     }
-    
+
     /**
      * Chinese characters change to Pinyin
      *
@@ -532,7 +532,7 @@ class Pinyin {
         if ($s == "") {
         	return '';
         }
-        
+
         if(strlen("中文")>4){ //if the string is not utf-8 encoding,change it to utf-8
         	$s = \mb_convert_encoding($s, 'GBK', 'utf-8');
         	//$s = iconv('utf-8', 'GBK', $s);
@@ -544,7 +544,7 @@ class Pinyin {
                 $i++;
             }else{
                 if ($i < (strlen($s) -1)) {
-                    if (ord($s[$i]) == 95) 
+                    if (ord($s[$i]) == 95)
                         $pinyin .= '-';
                     elseif (ord($s[$i+1])<=128)
                         $pinyin .= $s[$i];
@@ -553,13 +553,13 @@ class Pinyin {
                 } else {
                     $pinyin .= $s[$i];
                 }
-                
+
             }
 
         }
         return strtolower($pinyin);
     }
-    
+
     function asc2ToPinyin($asc2){
         $pinyin = $this->pinyin;
         foreach($pinyin as $value){

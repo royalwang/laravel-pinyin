@@ -2,16 +2,16 @@
 
 use Illuminate\Support\Facades\Facade;
 
-class PinyinslugFacade extends Facade {
+class PinyinFacade extends Facade
+{
 
     /**
      * Get the registered name of the component.
      *
      * @return string
      */
-    protected static function getFacadeAccessor() 
-    { 
-    	return 'pinyinslug'; 
+    protected static function getFacadeAccessor()
+    {
+        return 'pinyin';
     }
-
 }
