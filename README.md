@@ -69,7 +69,7 @@ Pinyin::convert('喛喞喟喠喡喢喣', Pinyin::POLICY_HYPHEN);
 Pinyin::first('今天天气不错'); 
 # J
 
-Pinyin::first('A', 'APPLE');
+Pinyin::first('APPLE');
 # A
 
 
