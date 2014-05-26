@@ -1,8 +1,8 @@
 <?php
-namespace Lokielse\Pinyin\Lib;
+namespace Lokielse\LaravelPinyin\Lib;
 
 /**
- * Pinyin 汉字转换拼音类
+ * Pinyin Converter
  */
 class Pinyin {
 

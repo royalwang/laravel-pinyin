@@ -1,7 +1,6 @@
-<?php namespace Jeepmac\Pinyinslug;
+<?php namespace Lokielse\LaravelPinyin;
 
 use Illuminate\Support\ServiceProvider;
-use Illuminate\Foundation\AliasLoader;
 
 class LaravelPinyinServiceProvider extends ServiceProvider
 {
@@ -32,7 +31,7 @@ class LaravelPinyinServiceProvider extends ServiceProvider
     {
         $this->app['laravel-pinyin'] = $this->app->share(
             function ($app) {
-                return new LaravelPinyin;
+                return new Pinyin;
             }
         );
     }

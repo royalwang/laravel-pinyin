@@ -1,9 +1,9 @@
 <?php
-namespace Lokielse\Pinyin;
+namespace Lokielse\LaravelPinyin;
 
-use Lokielse\Pinyin\Lib\Pinyin as PinyinLib;
+use Lokielse\LaravelPinyin\Lib\Pinyin as PinyinLib;
 
-class LaravelPinyin
+class Pinyin
 {
 
     const POLICY_CAMEL = 1;

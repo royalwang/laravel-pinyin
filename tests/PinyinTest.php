@@ -1,5 +1,5 @@
 <?php
-use Lokielse\Pinyin\Pinyin as Pinyin;
+use Lokielse\LaravelPinyin\Pinyin as Pinyin;
 
 class PinyinTest extends \PHPUnit_Framework_TestCase
 {
