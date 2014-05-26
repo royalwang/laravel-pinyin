@@ -33,7 +33,7 @@ Then, add alias
 
 That's it! You're good to go.
 
-## Usages:
+## Usages
 ```php
 Pinyin::convert('今天天气不错');
 //JinTianTianQiBuCuo
