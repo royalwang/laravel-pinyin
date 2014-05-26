@@ -24,7 +24,7 @@ Next, add the service provider to `app/config/app.php`.
 
 Then, add alias
 ```php
-'alias' => [
+'aliases' => [
     //..
     'Pinyin'=>'Lokielse\Pinyin\Facades\PinyinFacade',
 ]
