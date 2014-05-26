@@ -1,11 +1,9 @@
 Laravel-Pinyin
 ==========
-Tags: Chinese, Pinyin, tag, slug, URL, rewrite, Bing, permalink, SEO, 标签, 别名, PHP, Laravel
 
-## Installatio
-n
+## Installation
 
-The Pinyinslug service provider can be installed via [composer](http://getcomposer.org) by requiring the `lokielse/pinyin` package in your project's `composer.json`.
+The Pinyin service provider can be installed via [composer](http://getcomposer.org) by requiring the `lokielse/pinyin` package in your project's `composer.json`.
 
 ```json
 {
