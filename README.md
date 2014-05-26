@@ -66,12 +66,21 @@ Pinyin::convert('喛喞喟喠喡喢喣', Pinyin::POLICY_HYPHEN);
 # he-ji-huai-chong-wei-che-xu
 
 # first pinyin
-Pinyin::first('今天天气不错'); 
-# J
+Pinyin::first('上海市');
+# S
 
-Pinyin::first('APPLE');
-# A
+Pinyin::first('China');
+# C
 
+# first each pinyin
+Pinyin::firstEach('上海');
+# SH
+
+Pinyin::firstEach('加多宝');
+# JDB
+
+Pinyin::firstEach('league of legends');
+# LOL
 
 //default
 Pinyin::setDefaultPolicy(Pinyin::POLICY_UNDERSCORE);

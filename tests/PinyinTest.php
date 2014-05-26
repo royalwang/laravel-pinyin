@@ -17,6 +17,7 @@ class PinyinTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals('jin-tian-tian-qi-bu-cuo', $pinyin->convert('今天天气不错', Pinyin::POLICY_HYPHEN));
         $this->assertEquals('hong-mie-yu-mang-song', $pinyin->convert('叿吀吁吂吅', Pinyin::POLICY_HYPHEN));
         $this->assertEquals('he-ji-huai-chong-wei-che-xu', $pinyin->convert('喛喞喟喠喡喢喣', Pinyin::POLICY_HYPHEN));
+        $this->assertEquals('english', $pinyin->convert('English', Pinyin::POLICY_HYPHEN));
     }
 
     public function testSetDefaultPolicy()
@@ -34,7 +35,16 @@ class PinyinTest extends \PHPUnit_Framework_TestCase
     public function testFirst()
     {
         $pinyin = new Pinyin();
-        $this->assertEquals('J', $pinyin->first('今天天气不错'));
-        $this->assertEquals('A', $pinyin->first('a'));
+        $this->assertEquals('S', $pinyin->first('上海'));
+        $this->assertEquals('C', $pinyin->first('China'));
+    }
+
+    public function testFirstEach()
+    {
+        $pinyin = new Pinyin();
+        $this->assertEquals('SH', $pinyin->firstEach('上海'));
+        $this->assertEquals('JDB', $pinyin->firstEach('加多宝'));
+        $this->assertEquals('HSJ', $pinyin->firstEach('Hello世界'));
+        $this->assertEquals('LOL', $pinyin->firstEach('league of legends'));
     }
 }
