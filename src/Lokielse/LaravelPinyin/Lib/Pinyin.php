@@ -524,7 +524,7 @@ class Pinyin {
 
     public function asc2ToPinyin($asc2){
         foreach(self::$pinyin as $key=>$value){
-            if(array_search($asc2, $value)!=false){
+            if(array_search($asc2, $value)!==false){
                 return $key;
             }
         }
