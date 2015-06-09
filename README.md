@@ -86,6 +86,17 @@ Pinyin::firstEach('league of legends');
 Pinyin::setDefaultPolicy(Pinyin::POLICY_UNDERSCORE);
 Pinyin::setDefaultUpperCase(true);
 
+//PHP>=5.4 内置的方式
+//@doc http://php.net/manual/en/transliterator.transliterate.php
+
+transliterator_transliterate('Any-Latin;Latin-ASCII;lower()', '凉茶我喝加多宝！还是原来的配方，还是熟悉的味道! I love JDB!')
+#liang cha wo he jia duo bao! hai shi yuan lai de pei fang, hai shi shu xi de wei dao! i love jdb!
+
+transliterator_transliterate('Any-Latin;Latin-ASCII;lower()', '凉茶我喝加多宝！还是原来的配方，还是熟悉的味道! I love JDB!')
+#LIANG CHA WO HE JIA DUO BAO! HAI SHI YUAN LAI DE PEI FANG, HAI SHI SHU XI DE WEI DAO! I LOVE JDB!
+
+transliterator_transliterate('Any-Latin', '凉茶我喝加多宝！还是原来的配方，还是熟悉的味道! I love JDB!')
+#liáng chá wǒ hē jiā duō bǎo！ hái shì yuán lái de pèi fāng， hái shì shú xī de wèi dào! I love JDB!
 
 ```
 
