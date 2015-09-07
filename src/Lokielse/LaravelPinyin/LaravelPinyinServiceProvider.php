@@ -19,7 +19,9 @@ class LaravelPinyinServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        $this->package('lokielse/laravel-pinyin');
+        if (method_exists($this, 'package')) {
+            $this->package('lokielse/laravel-pinyin');
+        } 
     }
 
     /**
